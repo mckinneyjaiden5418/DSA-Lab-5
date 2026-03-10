@@ -1,15 +1,22 @@
 #ifndef BINARY_SEARCH_TREE_H
 #define BINARY_SEARCH_TREE_H
 
-struct TreeNode {
-	int value;
-	TreeNode* left;
-	TreeNode* right;
-};
 
 class BST {
 private:
-	// placeholder
+	struct TreeNode {
+		int value;
+		TreeNode* left;
+		TreeNode* right;
+		TreeNode(int value) {
+			value = value;
+			left = nullptr;
+			right = nullptr;
+		}
+	};
+
+	TreeNode* root;
+	bool insert(int value, TreeNode*& node);
 public:
 	bool insert(int value);
 	bool search(int value);
