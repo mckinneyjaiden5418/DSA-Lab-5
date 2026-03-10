@@ -13,6 +13,7 @@ private:
 
 	TreeNode* root;
 	bool insert(int value, TreeNode*& node);
+	bool search(int value, TreeNode* node);
 public:
 	bool insert(int value);
 	bool search(int value);

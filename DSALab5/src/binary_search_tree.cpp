@@ -15,6 +15,13 @@ bool BST::insert(int value) {
 	return insert(value, root);
 }
 
+bool BST::search(int value, TreeNode* node) {
+	if (node == nullptr) return false;
+	if (node->value == value) return true;
+	else if (node->value > value) return search(value, node->left);
+	else return search(value, node->right); // node->value > value
+}
+
 bool BST::search(int value) {
 	return false;
 }
