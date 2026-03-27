@@ -18,6 +18,7 @@ private:
 	int height(TreeNode* node);
 	bool remove(int value, TreeNode*& node);
 public:
+	BST() : root(nullptr) {}
 	bool insert(int value);
 	bool search(int value);
 	int count();
